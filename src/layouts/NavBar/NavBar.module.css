@@ -17,7 +17,7 @@
   background-color: var(--ink-highlight);
   color: var(--ink-light);
   cursor: pointer;
-  transition: background-color 0.1s ease, color 0.1 ease;
+  transition: background-color 0.1s ease, color 0.1s ease;
 }
 
 .logo > h1 {
@@ -41,7 +41,7 @@
   justify-content: center;
   border-right: 1px dashed var(--ink-dark);
   cursor: pointer;
-  transition: background-color 0.1s ease, color 0.1 ease;
+  transition: background-color 0.2s ease, color 0.1s ease;
   background-color: var(--ink-light);
 }
 
@@ -50,5 +50,6 @@
 }
 
 .options > ul:hover {
-  background-color: var(--ink-medium);
+  opacity: 0.9;
+  color: var(--ink-highlight);
 }
