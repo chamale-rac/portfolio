@@ -30,6 +30,13 @@ module.exports = {
         bundledDependencies: true,
       },
     ],
+    'react/function-component-definition': [
+      'error',
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
   // TODO remove this temporal fix for import/no-extraneous-dependencies error on main.jsx
   settings: {

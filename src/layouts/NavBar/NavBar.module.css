@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  display: relative;
+}
+
+.container > div {
+  width: 100%;
+  display: flex;
+}
+
+.logo {
+  border-bottom: 1px solid var(--ink-dark);
+  border-right: 1px solid var(--ink-dark);
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-color: var(--ink-highlight);
+  color: var(--ink-light);
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1 ease;
+}
+
+.logo > h1 {
+  padding: 0.5rem;
+}
+
+.logo:hover {
+  background-color: var(--ink-dark);
+}
+
+.options {
+  border-bottom: 1px dashed var(--ink-dark);
+  flex: 2;
+}
+
+.options > ul {
+  list-style: none;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px dashed var(--ink-dark);
+  cursor: pointer;
+  transition: background-color 0.1s ease, color 0.1 ease;
+  background-color: var(--ink-light);
+}
+
+.options > ul:last-child {
+  border-right: none;
+}
+
+.options > ul:hover {
+  background-color: var(--ink-medium);
+}

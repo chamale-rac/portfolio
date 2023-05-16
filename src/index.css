@@ -1,0 +1,119 @@
+/* START - GLOBAL CONFIGURATION */
+:root {
+  --ink-highlight: #f62d00;
+  --ink-dark: #000000;
+  --ink-medium: #b2b2b2;
+  --ink-light: #ffffff;
+}
+
+body {
+  color: var(--ink-dark);
+  background-color: var(--ink-light);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Font styles for headings */
+.font-heading {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .font-heading {
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .font-heading {
+    font-size: 2rem;
+  }
+}
+
+/* Font styles for titles */
+.font-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .font-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .font-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* Font styles for buttons */
+.font-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px) {
+  .font-button {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .font-button {
+    font-size: 0.75rem;
+  }
+}
+
+/* Font styles for body text */
+.font-body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 768px) {
+  .font-body {
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .font-body {
+    font-size: 0.75rem;
+  }
+}
+
+/* Font styles for subtitles */
+.font-subtitle {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .font-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .font-subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* END - GLOBAL CONFIGURATION */
