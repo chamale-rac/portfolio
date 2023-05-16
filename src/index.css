@@ -117,3 +117,20 @@ body {
 }
 
 /* END - GLOBAL CONFIGURATION */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px dashed var(--ink-dark);
+}
+
+html::-webkit-scrollbar-thumb {
+  border: 1px dashed var(--ink-dark);
+  background-color: var(--ink-medium);
+}
+
+body {
+  cursor: crosshair;
+}

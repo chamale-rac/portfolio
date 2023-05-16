@@ -7,7 +7,7 @@
 
 .main_text {
   width: 100%;
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 1rem;
   padding-bottom: 0.5rem;
   display: flex;
   align-items: end;
@@ -38,13 +38,15 @@
 
 .raise_container {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .image_container {
+  padding-top: 0.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--ink-dark);
   width: 100%;
@@ -71,11 +73,25 @@
 }
 
 .image {
-  /*  
-  border: 1px dashed var(--ink-dark);
-  */
   flex: 1;
-  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image > img {
+  width: 100%;
+  animation: move 5s ease infinite alternate;
+  transform: rotate(0deg);
+}
+
+@keyframes move {
+  from {
+    transform: rotate(-2deg);
+  }
+  to {
+    transform: rotate(2deg);
+  }
 }
 
 .with_contact {
@@ -84,10 +100,37 @@
 }
 
 .image_text > button {
-  margin-top: 0.35rem;
+  margin-top: 0.7rem;
   outline: none;
   border: 1px dashed var(--ink-dark);
   background-color: var(--ink-highlight);
   color: var(--ink-light);
   padding: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.image_text > button:hover {
+  background-color: var(--ink-light);
+  color: var(--ink-dark);
+  box-shadow: 3px 3px 0px 0px var(--ink-dark);
+  transform: translateX(-4px) translateY(-4px);
+}
+
+@media only screen and (min-width: 768px) {
+  .raise_container {
+    flex-direction: row;
+  }
+
+  .image_container {
+    border-right: 1px solid var(--ink-dark);
+  }
+
+  .image_container.prior_text {
+    padding-right: 0.5rem;
+  }
+
+  .image_container.prior_image {
+    padding-left: 2rem;
+  }
 }

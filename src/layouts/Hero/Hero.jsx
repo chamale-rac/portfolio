@@ -25,13 +25,14 @@ const Hero = () => {
           <div className={`${styles.image_text}  font-body`}>
             <p>Poised to build boldly and learn endlessly.</p>
           </div>
-          <img
-            className={`${styles.image}`}
-            src="/looney-brain-with-idea-bulb-and-flying-screens.svg"
-          />
+          <div className={styles.image}>
+            <img src="/looney-brain-with-idea-bulb-and-flying-screens.svg" />
+          </div>
         </div>
         <div className={`${styles.image_container} ${styles.prior_image}`}>
-          <img className={`${styles.image}`} src="/looney-astronomer.svg" />
+          <div className={styles.image}>
+            <img src="/looney-astronomer.svg" />
+          </div>
           <div className={`${styles.image_text} font-body`}>
             <p>Imagining possibilities outside constraints and conventions.</p>
           </div>
@@ -45,10 +46,9 @@ const Hero = () => {
               Team Up
             </button>
           </div>
-          <img
-            className={`${styles.image}`}
-            src="/looney-web-designer-constructing-web-site-and-painting-header.svg"
-          />
+          <div className={styles.image}>
+            <img src="/looney-web-designer-constructing-web-site-and-painting-header.svg" />
+          </div>
         </div>
       </div>
     </div>

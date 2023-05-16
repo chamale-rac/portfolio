@@ -3,7 +3,7 @@ import { NavBar, Section, Hero } from '@layouts'
 
 const App = () => {
   return (
-    <div className="app">
+    <div className="app" id="app">
       <Section isSticky>
         <NavBar />
       </Section>
