@@ -13,12 +13,6 @@ const App = () => {
       <Section>
         <Work />
       </Section>
-      <Section>
-        <Work />
-      </Section>
-      <Section>
-        <Work />
-      </Section>
     </div>
   )
 }

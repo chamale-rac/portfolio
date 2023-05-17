@@ -8,7 +8,7 @@ const Section = ({ children, isSticky = false }) => {
       style={{
         position: isSticky ? 'sticky' : 'relative',
         top: isSticky ? 0 : 'auto',
-        zIndex: isSticky ? 1 : 'auto',
+        zIndex: isSticky ? 2 : 'auto',
       }}
       className={`${styles.container}`}
     >

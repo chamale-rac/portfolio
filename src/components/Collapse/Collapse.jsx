@@ -10,18 +10,18 @@ const Collapse = ({ children, title = 'title' }) => {
 
   useEffect(() => {
     setContentHeight(contentRef.current.scrollHeight)
-  }, [])
+  }, [isClosed])
 
   return (
     <div>
-      <div
+      <h1
         onClick={() => setIsClosed(!isClosed)}
         className={`${styles.title} font-heading ${
           isClosed ? '' : styles.closed
         }`}
       >
-        <div className={styles.title_text}>{title} </div>
-      </div>
+        <div className={styles.title_text}>{title}</div>
+      </h1>
       <div
         className={`${styles.content} ${isClosed ? styles.closed : ''}`}
         style={{ maxHeight: isClosed ? 0 : contentHeight }}

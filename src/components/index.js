@@ -1,3 +1,4 @@
 import Collapse from './Collapse/Collapse'
+import Gallery from './Gallery/Gallery'
 
-export { Collapse }
+export { Collapse, Gallery }
