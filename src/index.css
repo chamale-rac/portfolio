@@ -153,15 +153,14 @@ body {
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
+  padding-top: 0.86rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 768px) {
   .column {
-    padding-top: 0.86rem;
+    padding-top: 0rem;
   }
-}
 
-@media screen and (min-width: 768px) {
   .column:nth-child(1),
   .column:nth-child(2) {
     padding-top: 0.86rem;
@@ -169,8 +168,16 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .column {
+    padding-top: 0rem;
+  }
+
   .column:nth-child(1) {
     padding-top: 0.86rem;
+  }
+
+  .column:nth-child(2) {
+    padding-top: 0rem;
   }
 }
 
