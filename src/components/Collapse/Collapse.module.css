@@ -7,7 +7,6 @@
   display: flex;
   background-color: var(--ink-light);
   overflow: hidden;
-  margin-bottom: 1rem;
 }
 
 .title::before {

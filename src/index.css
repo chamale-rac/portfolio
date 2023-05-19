@@ -155,8 +155,27 @@ body {
   padding: 0 4px;
 }
 
+@media screen and (min-width: 1024px) {
+  .column {
+    padding-top: 0.86rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .column:nth-child(1),
+  .column:nth-child(2) {
+    padding-top: 0.86rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column:nth-child(1) {
+    padding-top: 0.86rem;
+  }
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 768px) {
   .column {
     -ms-flex: 50%;
     flex: 50%;

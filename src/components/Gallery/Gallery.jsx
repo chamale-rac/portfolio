@@ -26,19 +26,21 @@ const Gallery = ({ data }) => {
       {cols.map((col) => (
         <div className="column">
           {col.map((item) => (
-            <div className={styles.card}>
+            <div
+              className={styles.card}
+              style={{
+                cursor: 'pointer',
+              }}
+            >
               <div className={styles.card_content}>
                 <h3
-                  className="font-title"
+                  className="font-subtitle"
                   style={{
                     color: item.color ? item.color : 'black',
                   }}
                 >
                   {item.title}
                 </h3>
-                {item.description && (
-                  <p className="font-body">{item.description}</p>
-                )}
               </div>
               <img src={item.image} alt={item.title} />
             </div>

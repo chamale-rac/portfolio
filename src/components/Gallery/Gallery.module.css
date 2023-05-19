@@ -31,13 +31,7 @@
   bottom: 0;
   writing-mode: vertical-rl;
   scale: -1;
-  padding-top: 0.5rem;
+  padding-top: 0.7rem;
   padding-right: 0.25rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.card_content > p {
-  background-color: var(--ink-light);
-  padding: 0.5rem;
-  border-bottom: 1px solid var(--ink-dark);
 }
