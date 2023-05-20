@@ -1,36 +1,35 @@
+/* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
+import React, { useState } from 'react'
 import { Collapse } from '@components'
 import * as styles from './About.module.css'
 
 const About = () => {
+  const [showImages, setShowImages] = useState(false)
+
+  const texts = [
+    'Son, brother, friend, and a lot more (CS student & pseudo-pianist).',
+    '19 years old, living in Guatemala and studying at UVG.',
+    'When I was born I was given the name Samuel, and you can call me like that.',
+  ]
+
   return (
-    <Collapse title="Me">
-      <div className={styles.about}>
-        <div className={styles.about_text}>
-          <p className="font-body">
-            I'm a 19 years old student of Computer Science at{' '}
-            <a
-              href="https://www.uvg.edu.gt/"
-              target="_blank"
-              rel="noreferrer"
-              style={{ color: 'black' }}
-            >
-              Universidad del Valle de Guatemala.
-            </a>
-          </p>
-          <p className="font-body">
-            I'm passionate about web development, UI/UX, and nobby illustration.
-          </p>
-          <p className="font-body">
-            Thanks, thats all you need to know about me.
-          </p>
+    <Collapse title="Who I am?" change={showImages}>
+      <div className={`${styles.container_max} font-body`}>
+        <div className={styles.container}>
+          {texts.map((text) => (
+            <p className={`${styles.text} ${showImages ? styles.show : ''}`}>
+              {text}
+            </p>
+          ))}
         </div>
-        <div className={styles.about_images}>
-          <img src="/about/me.jpeg" alt="me" />
-          <img src="/public/about/char.jpeg" alt="char" />
-          <img src="/public/about/text.jpeg" alt="text" />
-        </div>
+        <button
+          className={`${showImages ? styles.active : ''} font-button`}
+          type="button"
+          onClick={() => setShowImages((prev) => !prev)}
+        >
+          {showImages ? 'Hide' : 'Show'} @#$%^&*
+        </button>
       </div>
     </Collapse>
   )
