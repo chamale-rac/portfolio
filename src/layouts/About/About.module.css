@@ -28,7 +28,7 @@
   background-color: var(--ink-dark);
   top: 0;
   left: 100%;
-  background-image: url('/public/about/text.jpeg');
+  background-image: url('/about/1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -36,12 +36,11 @@
 }
 
 .container > .text:nth-child(1)::after {
-  background-image: url('/public/about/char.jpeg');
-  background-position: top;
+  background-image: url('/about/2.png');
 }
 
 .container > .text:nth-child(2)::after {
-  background-image: url('/public/about/me.jpeg');
+  background-image: url('/about/3.png');
 }
 
 .container > .text.show::after {
