@@ -15,7 +15,14 @@
         "icon": "faGithub",
         "href": "https://github.com/chamale-rac",
         "label": "GitHub",
-        "text": "https://github.com/chamale-rac",
+        "text": "@chamale-rac",
+        "target": true
+    },
+    {
+        "icon": "faBehance",
+        "href": "https://www.behance.net/chamalerac",
+        "label": "Behance",
+        "text": "@chamalerac",
         "target": true
     },
     {
@@ -23,6 +30,13 @@
         "href": "https://www.instagram.com/chamalerac",
         "label": "Instagram",
         "text": "@chamalerac",
+        "target": true
+    },
+    {
+        "icon": "faLinkedin",
+        "href": "https://www.linkedin.com/in/chamalerac",
+        "label": "LinkedIn",
+        "text": "Samuel Chamalé",
         "target": true
     }
 ]

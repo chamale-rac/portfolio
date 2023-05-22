@@ -1,11 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCopy } from '@fortawesome/free-solid-svg-icons'
 import * as styles from './ContactItem.module.css'
 
 const ContactItem = ({ icon, href, label, text, target = false }) => {
+  const [isCopied, setIsCopied] = useState(false)
+
+  const handleCopyClick = async () => {
+    try {
+      await navigator.clipboard.writeText(target ? href : text)
+      setIsCopied(true)
+      setTimeout(() => setIsCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy text: ', err)
+    }
+  }
+
   return (
-    <div className={styles.contact_item}>
+    <div className={`${styles.contact_item} font-body`}>
       <div className={styles.item_icon}>
         <FontAwesomeIcon icon={icon} />
       </div>
@@ -16,9 +29,12 @@ const ContactItem = ({ icon, href, label, text, target = false }) => {
           aria-label={label}
           target={target ? '_blank' : '_self'}
         >
-          {text}
+          {isCopied ? 'Copied!' : text}
         </a>
       </div>
+      <button type="button" onClick={handleCopyClick}>
+        <FontAwesomeIcon icon={faCopy} className={styles.copy_icon} />
+      </button>
     </div>
   )
 }

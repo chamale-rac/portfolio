@@ -1,5 +1,38 @@
 .container {
-  padding: 1rem 1.3rem;
   display: flex;
   flex-direction: column;
+}
+
+.personal_info {
+  display: flex;
+  flex-direction: row;
+}
+
+.personal_info .info_item {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+  margin-left: 0.1rem;
+  padding-right: 1rem;
+  border-right: 1px solid #0000008f;
+}
+
+.personal_info .info_item:last-child {
+  border-right: none;
+}
+
+.info_item .info_label {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.contact_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px solid var(--ink-dark);
+}
+
+.collapse_inside {
+  padding: 1rem;
 }
