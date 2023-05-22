@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavBar, Section, Hero, Work, About } from '@layouts'
+import { NavBar, Section, Hero, Work, About, Contact } from '@layouts'
 
 const App = () => {
   return (
@@ -7,14 +7,21 @@ const App = () => {
       <Section isSticky>
         <NavBar />
       </Section>
+
       <Section>
         <Hero />
       </Section>
+
       <Section>
         <Work />
       </Section>
+
       <Section>
         <About />
+      </Section>
+
+      <Section>
+        <Contact />
       </Section>
     </div>
   )

@@ -18,6 +18,7 @@ export default defineConfig({
         replacement: path.resolve(__dirname, 'src/components'),
       },
       { find: '@layouts', replacement: path.resolve(__dirname, 'src/layouts') },
+      { find: '@data', replacement: path.resolve(__dirname, 'src/data') },
     ],
   },
 })

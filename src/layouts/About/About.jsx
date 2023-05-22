@@ -9,7 +9,7 @@ const About = () => {
 
   const texts = [
     'Son, brother, friend, and a lot more (CS student & pseudo-pianist).',
-    '19 years old, living in Guatemala and studying at UVG.',
+    '19 years old, living and in Guatemala and studying at UVG.',
     'When I was born I was given the name Samuel, and you can call me like that.',
   ]
 
