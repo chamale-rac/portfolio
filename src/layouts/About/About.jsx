@@ -14,7 +14,7 @@ const About = () => {
   ]
 
   return (
-    <Collapse title="Who I am?">
+    <Collapse title="Who I am?" change={showImages}>
       <div className={`${styles.container_max} font-body`}>
         <div className={styles.container}>
           {texts.map((text) => (

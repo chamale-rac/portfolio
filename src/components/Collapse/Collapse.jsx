@@ -9,8 +9,9 @@ const Collapse = ({
   font = 'font-heading',
   index = null,
   changeFunction = null,
+  closed = true,
 }) => {
-  const [isClosed, setIsClosed] = useState(true)
+  const [isClosed, setIsClosed] = useState(closed)
   const [contentHeight, setContentHeight] = useState(null)
 
   const contentRef = useRef()
@@ -59,6 +60,7 @@ Collapse.propTypes = {
   font: PropTypes.string.isRequired,
   index: PropTypes.number.isRequired,
   changeFunction: PropTypes.func.isRequired,
+  closed: PropTypes.bool.isRequired,
 }
 
 export default Collapse

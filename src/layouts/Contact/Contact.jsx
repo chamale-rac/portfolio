@@ -36,7 +36,7 @@ const Contact = () => {
       <div className={styles.container}>
         <Collapse
           title="Personal"
-          font="font-subtitle"
+          font="font-title"
           changeFunction={handleChange}
           index={0}
         >
@@ -65,9 +65,10 @@ const Contact = () => {
         </Collapse>
         <Collapse
           title="Contact"
-          font="font-subtitle"
+          font="font-title"
           changeFunction={handleChange}
           index={1}
+          closed={false}
         >
           <div className={styles.collapse_inside}>
             <div className={styles.contact_info}>
