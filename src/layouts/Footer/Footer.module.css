@@ -1,0 +1,7 @@
+.container {
+  background-color: var(--ink-dark);
+  color: var(--ink-light);
+  align-self: flex-end;
+  padding: 0.5rem 0rem;
+  text-align: center;
+}

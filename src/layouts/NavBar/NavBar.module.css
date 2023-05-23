@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  display: relative;
+  height: 5.2vh;
 }
 
 .container > div {
