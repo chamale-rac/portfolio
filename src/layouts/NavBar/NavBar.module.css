@@ -11,8 +11,10 @@
 .logo {
   border-bottom: 1px solid var(--ink-dark);
   border-right: 1px solid var(--ink-dark);
+
   justify-content: center;
   align-items: center;
+
   flex: 1;
   background-color: var(--ink-highlight);
   color: var(--ink-light);

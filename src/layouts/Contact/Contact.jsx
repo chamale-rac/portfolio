@@ -43,10 +43,8 @@ const Contact = () => {
           <div className={styles.collapse_inside}>
             <div className={`${styles.personal_info} font-body`}>
               <div className={styles.info_item}>
-                <div className={styles.info_label}>Full name:</div>
-                <div className={styles.info_content}>
-                  Samuel Alejandro Chamalé Rac
-                </div>
+                <div className={styles.info_label}>Name:</div>
+                <div className={styles.info_content}>Samuel Chamalé</div>
               </div>
               <div className={styles.info_item}>
                 <div className={styles.info_label}>Age:</div>
@@ -56,9 +54,7 @@ const Contact = () => {
               </div>
               <div className={styles.info_item}>
                 <div className={styles.info_label}>Nationality:</div>
-                <div className={styles.info_content}>
-                  Guatemalan (born in Guatemala City)
-                </div>
+                <div className={styles.info_content}>Guatemalan</div>
               </div>
             </div>
           </div>

@@ -36,3 +36,33 @@
 .collapse_inside {
   padding: 1rem 1.3rem;
 }
+
+/*
+  PERSONAL INFO
+*/
+@media only screen and (max-width: 425px) {
+  .personal_info {
+    flex-direction: column;
+  }
+
+  .personal_info .info_item {
+    border-right: none;
+    margin-bottom: 0.5rem;
+  }
+
+  .personal_info .info_item:last-child {
+    margin-bottom: 0.1rem;
+  }
+}
+
+/*
+  CONTACT INFO
+*/
+@media only screen and (max-width: 768px) {
+  .contact_info {
+    flex-direction: column;
+  }
+  .contact_info .collapse_inside {
+    padding: 1rem 0.5rem;
+  }
+}
