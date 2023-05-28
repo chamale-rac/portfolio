@@ -19,6 +19,14 @@ export default defineConfig({
       },
       { find: '@layouts', replacement: path.resolve(__dirname, 'src/layouts') },
       { find: '@data', replacement: path.resolve(__dirname, 'src/data') },
+      {
+        find: '@hooks',
+        replacement: path.resolve(__dirname, 'src/hooks'),
+      },
+      {
+        find: '@config',
+        replacement: path.resolve(__dirname, 'src/config'),
+      },
     ],
   },
 })

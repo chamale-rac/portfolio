@@ -2,6 +2,7 @@ import React from 'react'
 import {
   NavBar,
   Section,
+  Display,
   Hero,
   Work,
   About,
@@ -13,22 +14,24 @@ import {
 const App = () => {
   return (
     <div className="app" id="app">
+      <Section>
+        <Display />
+      </Section>
+
       <Section isSticky>
         <NavBar />
       </Section>
 
-      <Section>Display...</Section>
-
-      <Section>
+      <Section htmlId="hero">
         <Hero />
       </Section>
 
       <Section>
-        <Work />
+        <About />
       </Section>
 
       <Section>
-        <About />
+        <Work />
       </Section>
 
       <Section>

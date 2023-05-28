@@ -1,0 +1,68 @@
+.container {
+  height: var(--display-height);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+/*BACKGROUND IMAGE*/
+.container::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  width: 50rem;
+  height: 50rem;
+  background-image: url('/public//display/looney-17.gif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+  animation-duration: 40s;
+}
+
+.content {
+  position: relative;
+  padding: 5rem;
+}
+
+.content > h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.content > button {
+  position: relative;
+
+  outline: none;
+  border: 1px dashed var(--ink-dark);
+  background-color: var(--ink-highlight);
+  color: var(--ink-light);
+  padding: 0.35rem 2rem;
+  padding-bottom: 0.46rem;
+  padding-left: 1rem;
+
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+
+.content > button:hover {
+  background-color: var(--ink-light);
+  color: var(--ink-dark);
+  box-shadow: 3px 3px 0px 0px var(--ink-dark);
+  transform: translateX(-4px) translateY(-4px);
+}
+
+.content > button::after {
+  content: '';
+  position: absolute;
+  width: 3.36rem;
+  height: 3.56rem;
+  z-index: 1;
+  margin-left: 0.3rem;
+  margin-top: 0.6rem;
+  background-image: url('/public/display/looney-emoji-dead-expression.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}

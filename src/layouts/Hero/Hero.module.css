@@ -81,16 +81,16 @@
 
 .image > img {
   width: 100%;
-  animation: move 5s ease infinite alternate;
+  animation: move 4s ease infinite alternate;
   transform: rotate(0deg);
 }
 
 @keyframes move {
   from {
-    transform: rotate(-2deg);
+    transform: rotate(-4deg);
   }
   to {
-    transform: rotate(2deg);
+    transform: rotate(4deg);
   }
 }
 

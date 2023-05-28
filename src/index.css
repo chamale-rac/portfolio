@@ -1,9 +1,16 @@
 /* START - GLOBAL CONFIGURATION */
 :root {
+  --nav-height: 5.2vh;
+  --display-height: calc(100vh - var(--nav-height));
+
   --ink-highlight: #f62d00;
   --ink-dark: #000000;
   --ink-medium: #b2b2b2;
   --ink-light: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

@@ -2,9 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as styles from './Section.module.css'
 
-const Section = ({ children, isSticky = false }) => {
+const Section = ({ children, isSticky = false, htmlId = '' }) => {
   return (
     <div
+      id={htmlId}
       style={{
         position: isSticky ? 'sticky' : 'relative',
         top: isSticky ? 0 : 'auto',
@@ -20,6 +21,7 @@ const Section = ({ children, isSticky = false }) => {
 Section.propTypes = {
   children: PropTypes.node.isRequired,
   isSticky: PropTypes.bool.isRequired,
+  htmlId: PropTypes.string.isRequired,
 }
 
 export default Section

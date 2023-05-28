@@ -62,7 +62,4 @@
   .contact_info {
     flex-direction: column;
   }
-  .contact_info .collapse_inside {
-    padding: 1rem 0.5rem;
-  }
 }

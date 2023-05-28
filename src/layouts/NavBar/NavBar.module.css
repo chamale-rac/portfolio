@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  height: 5.2vh;
+  height: var(--nav-height);
 }
 
 .container > div {
@@ -9,6 +9,7 @@
 }
 
 .logo {
+  border-top: 1px solid var(--ink-dark);
   border-bottom: 1px solid var(--ink-dark);
   border-right: 1px solid var(--ink-dark);
 
@@ -31,6 +32,7 @@
 }
 
 .options {
+  border-top: 1px dashed var(--ink-dark);
   border-bottom: 1px dashed var(--ink-dark);
   flex: 2;
 }
