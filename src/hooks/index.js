@@ -1,3 +1,4 @@
 import useScrollToElement from './useScrollToElement'
+import useActiveComponentId from './useActiveComponentId'
 
-export { useScrollToElement }
+export { useScrollToElement, useActiveComponentId }

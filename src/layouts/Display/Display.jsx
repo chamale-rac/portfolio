@@ -1,13 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
-import useScrollToElement from '@hooks/useScrollToElement'
+import { useScrollToElement } from '@hooks'
 import { navHeight } from '@config'
 import phrases from '@data/phrases.json'
 import * as styles from './Display.module.css'
 
 const Display = () => {
-  // eslint-disable-next-line no-unused-vars
   const [text, setText] = useState(phrases[0])
-  // eslint-disable-next-line no-unused-vars
   const [elementRef, scrollToElement] = useScrollToElement(navHeight)
 
   const [typedText, setTypedText] = useState('')

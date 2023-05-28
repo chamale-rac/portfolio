@@ -54,6 +54,9 @@
 }
 
 .options > ul:hover {
-  opacity: 0.9;
+  color: var(--ink-highlight);
+}
+
+.options > .active {
   color: var(--ink-highlight);
 }

@@ -4,7 +4,50 @@ import { Collapse } from '@components'
 import * as styles from './Extra.module.css'
 
 const Extra = () => {
-  return <Collapse title="Extra, Extra!">Extra</Collapse>
+  return (
+    <Collapse title="Extra, Extra!">
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+      <div>axtung</div>
+    </Collapse>
+  )
 }
 
 export default Extra
