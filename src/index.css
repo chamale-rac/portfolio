@@ -4,7 +4,7 @@
   --display-height: calc(100vh - var(--nav-height));
 
   --ink-highlight: #f62d00;
-  --ink-dark: #000000;
+  --ink-dark: #111111;
   --ink-medium: #b2b2b2;
   --ink-light: #f0f0f0;
 }

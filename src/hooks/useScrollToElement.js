@@ -1,4 +1,7 @@
 import { useRef } from 'react'
+// I know this is a bit of a hack, but it works for now
+// the main problem with using href="#id" is that it will scroll to the element but actually my navbar is sticky
+// so it will scroll to the element but the element will be hidden behind the navbar
 
 const useScrollToElement = (scrollUpVh) => {
   const elementRef = useRef(null)

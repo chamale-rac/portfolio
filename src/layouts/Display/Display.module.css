@@ -13,7 +13,7 @@
   right: 0;
   width: 50rem;
   height: 50rem;
-  background-image: url('/public//display/looney-17.gif');
+  background-image: url('/display/looney-17.gif');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -62,7 +62,7 @@
   z-index: 1;
   margin-left: 0.3rem;
   margin-top: 0.6rem;
-  background-image: url('/public/display/looney-emoji-dead-expression.png');
+  background-image: url('/display/looney-emoji-dead-expression.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
