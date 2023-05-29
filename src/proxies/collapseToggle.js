@@ -1,7 +1,8 @@
 import { proxy } from 'valtio'
 
 const collapseToggle = proxy({
-  section: null,
+  associatedId: null,
+  toggleInstant: false,
 })
 
 export default collapseToggle

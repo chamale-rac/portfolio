@@ -27,6 +27,10 @@ export default defineConfig({
         find: '@config',
         replacement: path.resolve(__dirname, 'src/config'),
       },
+      {
+        find: '@proxies',
+        replacement: path.resolve(__dirname, 'src/proxies'),
+      },
     ],
   },
 })

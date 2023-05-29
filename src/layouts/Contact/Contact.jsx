@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { ContactItem, Collapse } from '@components'
 import {
   faGithub,
@@ -10,7 +11,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import contactItems from '@data/contactItems.json'
 import * as styles from './Contact.module.css'
 
-const Contact = () => {
+const Contact = ({ associatedId }) => {
   const [change, setChange] = React.useState([false, false])
 
   const handleChange = (index) => {
@@ -32,7 +33,12 @@ const Contact = () => {
   }
 
   return (
-    <Collapse title="Info×1000" change={change}>
+    <Collapse
+      title="Info×1000"
+      change={change}
+      associatedId={associatedId}
+      isSection
+    >
       <div className={styles.container}>
         <Collapse
           title="Personal"
@@ -84,6 +90,10 @@ const Contact = () => {
       </div>
     </Collapse>
   )
+}
+
+Contact.propTypes = {
+  associatedId: PropTypes.string.isRequired,
 }
 
 export default Contact

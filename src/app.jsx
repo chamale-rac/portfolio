@@ -14,34 +14,27 @@ import {
 const App = () => {
   return (
     <div className="app" id="app">
-      <Section>
+      <Section htmlId="display">
         <Display />
       </Section>
-
       <Section isSticky>
         <NavBar />
       </Section>
-
       <Section htmlId="hero">
         <Hero />
       </Section>
-
       <Section htmlId="about">
-        <About />
+        <About associatedId="about" />
       </Section>
-
       <Section htmlId="work">
-        <Work />
+        <Work associatedId="work" />
       </Section>
-
       <Section htmlId="contact">
-        <Contact />
+        <Contact associatedId="contact" />
       </Section>
-
       <Section>
         <Extra />
       </Section>
-
       <Section>
         <Footer />
       </Section>

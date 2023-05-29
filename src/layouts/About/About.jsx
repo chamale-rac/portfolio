@@ -1,10 +1,9 @@
-/* eslint-disable max-len */
-/* eslint-disable react/no-unescaped-entities */
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import { Collapse } from '@components'
 import * as styles from './About.module.css'
 
-const About = () => {
+const About = ({ associatedId }) => {
   const [showImages, setShowImages] = useState(false)
 
   const texts = [
@@ -14,7 +13,12 @@ const About = () => {
   ]
 
   return (
-    <Collapse title="Who I am?" change={showImages}>
+    <Collapse
+      title="Who I am?"
+      change={showImages}
+      associatedId={associatedId}
+      isSection
+    >
       <div className={`${styles.container_max} font-body`}>
         <div className={styles.container}>
           {texts.map((text) => (
@@ -33,6 +37,10 @@ const About = () => {
       </div>
     </Collapse>
   )
+}
+
+About.propTypes = {
+  associatedId: PropTypes.string.isRequired,
 }
 
 export default About

@@ -145,6 +145,7 @@ body {
 }
 /* END - GENERAL */
 
+/* TODO esto lo tengo que quitar de acá*/
 /* START - RESPONSIVE GRID*/
 .row {
   display: -ms-flexbox; /* IE10 */

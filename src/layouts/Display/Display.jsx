@@ -1,22 +1,25 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useScrollToElement } from '@hooks'
 import { navHeight } from '@config'
 import phrases from '@data/phrases.json'
 import * as styles from './Display.module.css'
 
+// TODO make this responsive
 const Display = () => {
   const [text, setText] = useState(phrases[0])
   const [elementRef, scrollToElement] = useScrollToElement(navHeight)
 
-  const [typedText, setTypedText] = useState('')
+  const [typedText, setTypedText] = useState(null)
   const [isTyping, setIsTyping] = useState(true)
 
+  const [isFirstTime, setIsFirstTime] = useState(true)
   useEffect(() => {
     const intervalId = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * phrases.length)
       const newWord = phrases[randomIndex]
       setIsTyping(true)
+      setIsFirstTime(false)
       for (let i = 0; i <= newWord.length; i += 1) {
         setTimeout(() => {
           setTypedText(newWord.slice(0, i))
@@ -46,8 +49,9 @@ const Display = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <h1 className="font-heading">
-          This is {typedText}
-          {isTyping ? '|' : ''}
+          This is{isFirstTime ? '' : ' '}
+          {typedText}
+          {isTyping && (isFirstTime ? '?' : '|')}
         </h1>
         <button
           type="button"

@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { useSnapshot } from 'valtio'
+import { collapseToggle } from '@proxies'
 import * as styles from './Collapse.module.css'
 
 const Collapse = ({
@@ -10,7 +12,10 @@ const Collapse = ({
   index = null,
   changeFunction = null,
   closed = true,
+  associatedId = null,
+  isSection = false,
 }) => {
+  const collapseToggleSnap = useSnapshot(collapseToggle)
   const [isClosed, setIsClosed] = useState(closed)
   const [contentHeight, setContentHeight] = useState(null)
 
@@ -33,6 +38,16 @@ const Collapse = ({
       changeFunction(index)
     }
   }
+
+  useEffect(() => {
+    if (isSection) {
+      if (collapseToggleSnap.associatedId === associatedId) {
+        setIsClosed(false)
+      } else {
+        setIsClosed(true)
+      }
+    }
+  }, [collapseToggleSnap.associatedId, collapseToggleSnap.toggleInstant])
 
   return (
     <div>
@@ -61,6 +76,8 @@ Collapse.propTypes = {
   index: PropTypes.number.isRequired,
   changeFunction: PropTypes.func.isRequired,
   closed: PropTypes.bool.isRequired,
+  associatedId: PropTypes.string.isRequired,
+  isSection: PropTypes.bool.isRequired,
 }
 
 export default Collapse
