@@ -1,7 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import { useSnapshot } from 'valtio'
 import { collapseToggle } from '@proxies'
+import { useScrollToElement } from '@hooks'
+import { navHeight } from '@config'
 import * as styles from './Collapse.module.css'
 
 const Collapse = ({
@@ -19,6 +22,8 @@ const Collapse = ({
   const [isClosed, setIsClosed] = useState(closed)
   const [contentHeight, setContentHeight] = useState(null)
 
+  const [elementRef, scrollToElement] = useScrollToElement(navHeight)
+
   const contentRef = useRef()
 
   // Add on resize listener
@@ -32,8 +37,14 @@ const Collapse = ({
     }, 1000)
   }, [change])
 
-  const handleClose = () => {
-    setIsClosed(!isClosed)
+  const handleClose = (id, delay = 0) => {
+    if (isSection && isClosed === true) {
+      collapseToggle.associatedId = id
+      collapseToggle.toggleInstant = !collapseToggleSnap.toggleInstant
+      scrollToElement(id, delay)
+    } else {
+      setIsClosed(!isClosed)
+    }
     if (changeFunction) {
       changeFunction(index)
     }
@@ -52,7 +63,7 @@ const Collapse = ({
   return (
     <div>
       <h1
-        onClick={() => handleClose()}
+        onClick={() => handleClose(associatedId, 700)}
         className={`${styles.title} ${font} ${isClosed ? '' : styles.closed}`}
       >
         <div className={styles.title_text}>{title}</div>

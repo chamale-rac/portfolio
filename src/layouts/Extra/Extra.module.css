@@ -56,8 +56,8 @@
 }
 
 .gif_container > img {
-  height: 50%;
-  width: 50%;
+  height: 52%;
+  width: 52%;
 }
 /*Responsiveness*/
 @media only screen and (max-width: 768px) {
