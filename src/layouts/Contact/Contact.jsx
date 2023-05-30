@@ -11,6 +11,25 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import contactItems from '@data/contactItems.json'
 import * as styles from './Contact.module.css'
 
+const otherInfo = [
+  {
+    label: 'Age',
+    text: '19 years old (born on 2003)',
+  },
+  {
+    label: 'Skills',
+    text: 'JS, GIT, NODE',
+  },
+  {
+    label: 'Languages',
+    text: 'English, Spanish',
+  },
+  {
+    label: 'Timezone',
+    text: '(UTC-6)',
+  },
+]
+
 const Contact = ({ associatedId }) => {
   const [change, setChange] = React.useState([false, false])
 
@@ -41,27 +60,19 @@ const Contact = ({ associatedId }) => {
     >
       <div className={styles.container}>
         <Collapse
-          title="Personal"
+          title="Other"
           font="font-title"
           changeFunction={handleChange}
           index={0}
         >
           <div className={styles.collapse_inside}>
             <div className={`${styles.personal_info} font-body`}>
-              <div className={styles.info_item}>
-                <div className={styles.info_label}>Name:</div>
-                <div className={styles.info_content}>Samuel Chamalé</div>
-              </div>
-              <div className={styles.info_item}>
-                <div className={styles.info_label}>Age:</div>
-                <div className={styles.info_content}>
-                  19 years old (born on 2003)
+              {otherInfo.map((item) => (
+                <div className={styles.info_item}>
+                  <div className={styles.info_label}>{item.label}:</div>
+                  <div className={styles.info_content}>{item.text}</div>
                 </div>
-              </div>
-              <div className={styles.info_item}>
-                <div className={styles.info_label}>Nationality:</div>
-                <div className={styles.info_content}>Guatemalan</div>
-              </div>
+              ))}
             </div>
           </div>
         </Collapse>
