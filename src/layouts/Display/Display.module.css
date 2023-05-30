@@ -66,3 +66,51 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+@media only screen and (max-width: 1024px) {
+  .container::after {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .content > h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container::after {
+    width: 25rem;
+    height: 25rem;
+  }
+
+  .content > h1 {
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .container {
+    height: var(--display-height);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+  }
+
+  .container::after {
+    top: 13%;
+    width: 60vw;
+    height: 60vw;
+    right: 20vw;
+  }
+
+  .content {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .content > h1 {
+    font-size: 1.4rem;
+  }
+}

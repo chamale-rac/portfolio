@@ -1,8 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react'
+import { useScrollToElement } from '@hooks'
+import { navHeight } from '@config'
 import * as styles from './Hero.module.css'
 
 const Hero = () => {
+  const [elementRef, scrollToElement] = useScrollToElement(navHeight)
   return (
     <div className={`${styles.container} font-heading`}>
       <div className={`${styles.main_text}`}>
@@ -42,7 +45,11 @@ const Hero = () => {
             className={`${styles.image_text}  font-body ${styles.with_contact}`}
           >
             <p>Together, building what improves our world.</p>
-            <button className="font-button" type="button">
+            <button
+              className="font-button"
+              type="button"
+              onClick={() => scrollToElement('extra')}
+            >
               Team Up
             </button>
           </div>

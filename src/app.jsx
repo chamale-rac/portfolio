@@ -32,7 +32,7 @@ const App = () => {
       <Section htmlId="contact">
         <Contact associatedId="contact" />
       </Section>
-      <Section>
+      <Section htmlId="extra">
         <Extra />
       </Section>
       <Section>
