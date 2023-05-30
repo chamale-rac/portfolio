@@ -5,7 +5,6 @@ import { navHeight } from '@config'
 import phrases from '@data/phrases.json'
 import * as styles from './Display.module.css'
 
-// TODO make this responsive
 const Display = () => {
   const [text, setText] = useState(phrases[0])
   const [elementRef, scrollToElement] = useScrollToElement(navHeight)

@@ -22,9 +22,9 @@ const Gallery = ({ data }) => {
   }, [])
 
   return (
-    <div className="row">
+    <div className={styles.row}>
       {cols.map((col) => (
-        <div className="column">
+        <div className={styles.column}>
           {col.map((item) => (
             <div
               className={styles.card}
@@ -41,6 +41,9 @@ const Gallery = ({ data }) => {
                 >
                   {item.title}
                 </h3>
+                <p className={`${styles.description} font-body`}>
+                  {item.description}
+                </p>
               </div>
               <img src={item.image} alt={item.title} />
             </div>

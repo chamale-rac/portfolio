@@ -26,7 +26,7 @@ const Collapse = ({
 
   const contentRef = useRef()
 
-  // Add on resize listener
+  // TODO Add on resize listener
   useEffect(() => {
     setContentHeight(contentRef.current.scrollHeight)
   }, [isClosed])

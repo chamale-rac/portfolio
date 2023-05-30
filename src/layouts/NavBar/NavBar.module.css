@@ -1,6 +1,9 @@
+/*TODO check where is coming from the overflow, temporal overflow-y: hidden;*/
 .container {
   display: flex;
   height: var(--nav-height);
+  position: relative;
+  overflow-y: hidden;
 }
 
 .container > div {
