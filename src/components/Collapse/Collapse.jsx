@@ -28,6 +28,14 @@ const Collapse = ({
 
   // TODO Add on resize listener
   useEffect(() => {
+    const handleResize = () => {
+      setContentHeight(contentRef.current.scrollHeight)
+    }
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  useEffect(() => {
     setContentHeight(contentRef.current.scrollHeight)
   }, [isClosed])
 

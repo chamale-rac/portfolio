@@ -5,7 +5,6 @@ import { collapseToggle } from '@proxies'
 import { useActiveComponentId, useScrollToElement } from '@hooks'
 import { navHeight } from '@config'
 import * as styles from './NavBar.module.css'
-/*ASDASDASD */
 
 const sections = ['About', 'Work', 'Contact']
 

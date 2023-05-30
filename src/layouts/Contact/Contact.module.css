@@ -40,7 +40,7 @@
 /*
   PERSONAL INFO
 */
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 570px) {
   .personal_info {
     flex-direction: column;
   }

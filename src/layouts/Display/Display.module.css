@@ -89,7 +89,7 @@
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 570px) {
   .container {
     height: var(--display-height);
     display: flex;

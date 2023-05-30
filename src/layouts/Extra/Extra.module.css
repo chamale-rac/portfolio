@@ -83,7 +83,7 @@
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 570px) {
   .buttons_container > .button_wrapper {
     margin: 1rem;
   }
