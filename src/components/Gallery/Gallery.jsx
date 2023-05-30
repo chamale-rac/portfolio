@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faCode,
+  faArrowUpRightFromSquare,
+} from '@fortawesome/free-solid-svg-icons'
 import * as styles from './Gallery.module.css'
 
 const Gallery = ({ data }) => {
@@ -29,7 +34,7 @@ const Gallery = ({ data }) => {
             <div
               className={styles.card}
               style={{
-                cursor: 'pointer',
+                cursor: 'cell',
               }}
             >
               <div className={styles.card_content}>
@@ -41,9 +46,41 @@ const Gallery = ({ data }) => {
                 >
                   {item.title}
                 </h3>
-                <p className={`${styles.description} font-body`}>
+                <p
+                  className={`${styles.description} font-body`}
+                  style={{
+                    cursor: 'text',
+                  }}
+                >
                   {item.description}
                 </p>
+                <div className={`${styles.buttons_container} font-button`}>
+                  {(item.type === 'page' || item.type === 'building') && (
+                    <a
+                      className={`${styles.button}`}
+                      href={item.code}
+                      rel="noreferrer"
+                      aria-label="Go to code"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faCode} />
+                    </a>
+                  )}
+                  {(item.type === 'page' ||
+                    item.type === 'illustration' ||
+                    item.type === 'music' ||
+                    item.type === 'writings') && (
+                    <a
+                      className={`${styles.button}`}
+                      href={item.link}
+                      rel="noreferrer"
+                      aria-label="Go to page"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                    </a>
+                  )}
+                </div>
               </div>
               <img src={item.image} alt={item.title} />
             </div>

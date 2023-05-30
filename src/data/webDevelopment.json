@@ -101,8 +101,8 @@
         "image": "/work/cell.PNG",
         "link": "https://chamale-rac.github.io/CellAnalogy",
         "code": "https://github.com/chamale-rac/CellAnalogy",
-        "type": "page",
-        "color": "white"
+        "color": "white",
+        "type": "page"
     },
     {
         "title": "Let's party",
@@ -110,7 +110,7 @@
         "image": "/work/party.PNG",
         "link": "https://github.com/chamale-rac/andrea-invitation",
         "code": "https://chamale-rac.github.io/andrea-invitation",
-        "type": "page",
-        "color": "white"
+        "color": "white",
+        "type": "page"
     }
 ]

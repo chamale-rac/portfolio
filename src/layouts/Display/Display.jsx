@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useScrollToElement } from '@hooks'
 import { navHeight } from '@config'
 import phrases from '@data/phrases.json'

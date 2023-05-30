@@ -49,7 +49,7 @@ const Extra = () => {
         </a>
       </div>
       <div className={styles.gif_container}>
-        <img src="/public/looney-locator.gif" />
+        <img src="/looney-locator.gif" />
       </div>
     </div>
   )

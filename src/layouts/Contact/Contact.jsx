@@ -18,7 +18,7 @@ const otherInfo = [
   },
   {
     label: 'Skills',
-    text: 'JS, GIT and CHAT-GPT',
+    text: 'JS, GIT and PROMPTING',
   },
   {
     label: 'Languages',
