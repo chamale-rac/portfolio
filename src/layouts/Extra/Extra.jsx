@@ -1,9 +1,5 @@
 import React from 'react'
-import {
-  faGithub,
-  faTwitter,
-  faWhatsapp,
-} from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import * as styles from './Extra.module.css'
 
@@ -35,6 +31,7 @@ const Extra = () => {
           </div>
           <h3 className="font-subtitle">+Projects</h3>
         </a>
+        {/**
         <a
           className={styles.button_wrapper}
           type="button"
@@ -46,7 +43,8 @@ const Extra = () => {
             <FontAwesomeIcon icon={faWhatsapp} />
           </div>
           <h3 className="font-subtitle">TXT</h3>
-        </a>
+        </a>        
+         */}
       </div>
       <div className={styles.gif_container}>
         <img src="/looney-locator.gif" />

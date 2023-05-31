@@ -6,12 +6,6 @@
         "text": "4444@schr.tech"
     },
     {
-        "icon": "faPhone",
-        "href": "tel:+50255985395",
-        "label": "Phone",
-        "text": "(502) 5598 5395"
-    },
-    {
         "icon": "faGithub",
         "href": "https://github.com/chamale-rac",
         "label": "GitHub",
