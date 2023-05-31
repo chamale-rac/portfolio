@@ -14,7 +14,7 @@ const About = ({ associatedId }) => {
 
   return (
     <Collapse
-      title="Who I am?"
+      title="Who am I?"
       change={showImages}
       associatedId={associatedId}
       isSection
