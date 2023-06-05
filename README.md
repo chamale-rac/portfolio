@@ -4,5 +4,6 @@
 - Loading page
 - Custom cursor
 - Dark mode
+- Scroll with acceleration
 
 
