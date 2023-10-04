@@ -17,7 +17,7 @@ const FullLoader = () => {
       </div>
       <div className={styles.icon_wrapper}>
         <img
-          src="/public/looney-locator-optimized.gif"
+          src="/looney-locator-optimized.gif"
           alt="loader"
           className={styles.loader}
         />
