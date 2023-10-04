@@ -13,7 +13,7 @@ const ContactItem = ({ icon, href, label, text, target = false }) => {
       setIsCopied(true)
       setTimeout(() => setIsCopied(false), 2000)
     } catch (err) {
-      console.error('Failed to copy text: ', err)
+      // console.error('Failed to copy text: ', err)
     }
   }
 

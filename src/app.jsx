@@ -10,10 +10,12 @@ import {
   Extra,
   Footer,
 } from '@layouts'
+import { FullLoader } from '@components'
 
 const App = () => {
   return (
     <div className="app" id="app">
+      <FullLoader />
       <Section htmlId="display">
         <Display />
       </Section>

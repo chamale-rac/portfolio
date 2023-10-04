@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import { useScrollToElement } from '@hooks'
 import { navHeight } from '@config'
 import phrases from '@data/phrases.json'
@@ -13,10 +13,16 @@ const Display = () => {
   const [isTyping, setIsTyping] = useState(true)
 
   const [isFirstTime, setIsFirstTime] = useState(true)
+
+  const index = useRef(0)
+
   useEffect(() => {
     const intervalId = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * phrases.length)
-      const newWord = phrases[randomIndex]
+      const newWord = phrases[index.current]
+      index.current += 1
+      if (index.current >= phrases.length) {
+        index.current = 0
+      }
       setIsTyping(true)
       setIsFirstTime(false)
       for (let i = 0; i <= newWord.length; i += 1) {
